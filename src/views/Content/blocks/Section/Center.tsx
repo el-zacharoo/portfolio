@@ -10,7 +10,7 @@ import type { SectionTypes } from '@/types';
 const Center = (props: SectionTypes): JSX.Element => {
     const { contentEntry } = props;
 
-    const { url } = contentEntry.fields.image.fields.file || {};
+    const { url } = contentEntry.fields.image.fields.file ?? {};
 
     return (
         <Stack alignItems="center" spacing={2} >

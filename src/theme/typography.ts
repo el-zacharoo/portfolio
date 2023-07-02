@@ -2,46 +2,35 @@ import { TypographyVariantsOptions } from "@mui/material";
 
 export const typography: TypographyVariantsOptions = {
     h1: {
-        fontSize: '40px',
+        fontSize: '2.5rem',
         fontWeight: 500,
-       
-        letterSpacing: '0em',
-        textTransform: 'uppercase',
-        color: '#000',
+        fontFamily: "sans-serif"
     },
     h2: {
-        fontSize: '45px',
+        fontSize: '2.25rem',
         fontWeight: 400,
-      
-        fontStle: 'normal',
-        textTransform: 'uppercase',
+        fontStyle: 'normal',
     },
     h3: {
-        fontSize: '34px',
+        fontSize: '2rem',
         fontWeight: 500,
-      
         fontStyle: 'normal',
         letterSpacing: '.02em'
     },
     h4: {
         fontSize: '1.75rem',
         fontWeight: 400,
-        fontFamily: 'proxima-nova',
     },
     h5: {
-        fontSize: '22px',
+        fontSize: '1.5rem',
         fontWeight: 400,
-      
         letterSpacing: '.04em',
-        textTransform: 'uppercase',
     },
     h6: {
-        
         fontWeight: 400,
         fontStyle: 'normal',
-        fontSize: '24px',
+        fontSize: '1.25rem',
         letterSpacing: '0.72px',
-        textTransform: 'uppercase',
         textDecorationStyle: 'solid'
     },
     subtitle1: {
@@ -53,20 +42,11 @@ export const typography: TypographyVariantsOptions = {
         fontSize: '0.9rem',
         fontWeight: 800,
         letterSpacing: '.025em',
-     
-    },
-    body1: {
-        fontSize: '14px',
-        fontWeight: 300,
-      
-        fontStyle: 'normal',
-        letterSpacing: '.05em',
-        lineHeight: '2em',
+
     },
     body2: {
         fontSize: '14px',
         fontWeight: 300,
-       
         color: '#00000080',
         letterSpacing: '.05em',
     },
@@ -78,6 +58,5 @@ export const typography: TypographyVariantsOptions = {
     caption: {
         fontSize: '0.75rem',
         fontWeight: 400,
-        fontFamily: 'proxima-nova',
     },
 };

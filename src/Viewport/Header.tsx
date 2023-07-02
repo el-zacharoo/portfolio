@@ -56,7 +56,6 @@ const Header = (): JSX.Element => {
                             {menuItems.map((item, index) =>
                                 <NavButton key={index} item={item} onClick={() => handleNavigate(item.fields.pageSlug)} />
                             )}
-                            <Button>Contact</Button>
                         </Box>
                         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                             <IconButton onClick={handleClick} color="inherit">
@@ -84,12 +83,12 @@ type NavButtonProps = {
 
 // switches between href links and internal links
 const NavButton = ({ item, onClick }: NavButtonProps): JSX.Element | undefined => {
-    const { url } = item.fields.media.fields.file ?? {};
+    const imgUrl = item.fields.media.fields.file?.url ?? {};
 
     if (item.fields.pageSlug) {
         return <Button sx={{ mx: 1 }} color="inherit" onClick={() => onClick()} >{item.fields.name}</Button>
     }
-    if (url) {
-        return <Button sx={{ mx: 1 }} color="inherit" target="_blank" href={url as string} >{item.fields.name}</Button>
+    if (imgUrl) {
+        return <Button sx={{ mx: 1 }} color="inherit" target="_blank" href={imgUrl as string} >{item.fields.name}</Button>
     }
 }

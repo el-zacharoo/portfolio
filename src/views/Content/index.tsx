@@ -1,4 +1,4 @@
-import { lazy, JSX } from 'react';
+import React, { lazy, JSX } from 'react';
 
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from 'react-router-dom';
@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { fetchContent } from './api';
 import HeroBanner from './blocks/HeroBanner';
 import Section from './blocks/Section';
+import TileBlock from './blocks/TileBlock';
 import type { ContentBlockType, AllEntries } from '@/types';
 
 const NotFound = lazy(() => import('@/views/NotFound'));
@@ -13,6 +14,7 @@ const NotFound = lazy(() => import('@/views/NotFound'));
 const blocks: AllEntries = {
     "heroBanner": HeroBanner,
     "section": Section,
+    "tileBlock": TileBlock,
 }
 
 const Content = (): JSX.Element => {
@@ -36,7 +38,7 @@ const Content = (): JSX.Element => {
 
 export default Content;
 
-const ContentBlock = (props: any) => {
+const ContentBlock = (props: any): React.ReactFragment | JSX.Element | React.ReactNode => {
     const { contentEntry } = props;
 
     const name = contentEntry?.sys?.contentType.sys.id;
