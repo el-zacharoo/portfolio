@@ -30,7 +30,7 @@ export const fetchContent = async ({ queryKey }: QueryFunctionContext<QueryKey>)
             // eslint-disable-next-line camelcase
             content_type: type,
             "fields.pageSlug": slug,
-            include: include || 3,
+            include: include ?? 3,
         });
         return resp;
     } catch (error) {
