@@ -18,6 +18,7 @@ export type HerobannerProps = {
     contentEntry: EntrySkeletonType<{
         headline: string;
         body: string;
+        heroImage: Asset;
     }>
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import { JSX } from 'react';
 
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
@@ -9,7 +9,7 @@ import { SectionTypes } from '@/types';
 const Right = (props: SectionTypes): JSX.Element => {
     const { contentEntry } = props;
 
-    const { url } = contentEntry.fields.image.fields.file || {};
+    const { url } = contentEntry.fields.image.fields.file ?? {};
 
     return (
         <>

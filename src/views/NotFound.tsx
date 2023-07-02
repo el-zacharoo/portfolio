@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';

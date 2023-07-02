@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, JSX } from "react";
 
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from "@mui/material/AppBar";
@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import Menu from '@mui/material/Menu';
-// import MenuItem from '@mui/material/MenuItem';
 import Toolbar from "@mui/material/Toolbar";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
@@ -34,7 +33,9 @@ const Header = (): JSX.Element => {
 
     const handleNavigate = (path: string): void => {
         setAnchorEl(null);
-        if (!path) return;
+        if (!path) {
+            return;
+        }
         if (path === "home") {
             navigate("/", { state: { data: path } });
         }
