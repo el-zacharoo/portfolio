@@ -84,7 +84,7 @@ type NavButtonProps = {
 
 // switches between href links and internal links
 const NavButton = ({ item, onClick }: NavButtonProps): JSX.Element | undefined => {
-    const { url } = item.fields.media.fields.file || {};
+    const { url } = item.fields.media.fields.file ?? {};
 
     if (item.fields.pageSlug) {
         return <Button sx={{ mx: 1 }} color="inherit" onClick={() => onClick()} >{item.fields.name}</Button>

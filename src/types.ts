@@ -19,6 +19,8 @@ export type HerobannerProps = {
         headline: string;
         body: string;
         heroImage: Asset;
+        ctaLabel: string;
+        ctaLink: string;
     }>
 };
 

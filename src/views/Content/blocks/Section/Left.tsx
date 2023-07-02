@@ -13,7 +13,7 @@ const Left = (props: SectionTypes): JSX.Element => {
             {contentEntry &&
                 <Grid container direction="row" spacing={2} >
                     <Grid xs={12} sm={6} >
-                        <Typography id="sectionHeadline" align="center" variant="h2" >
+                        <Typography id="sectionHeadline" variant="h2" >
                             {contentEntry.fields.headline}
                         </Typography>
                         <Typography>
@@ -22,12 +22,7 @@ const Left = (props: SectionTypes): JSX.Element => {
 
                     </Grid>
                     <Grid xs={12} sm={6} >
-                        {/* <Typography id="sectionHeadline" align="center" variant="h2" >
-                            {contentEntry.fields.headline}
-                        </Typography>
-                        <Typography>
-                            {contentEntry.fields.body}
-                        </Typography> */}
+                       
                     </Grid>
 
                 </Grid >
