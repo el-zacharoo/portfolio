@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "ndev": "netlify env:import netlify/functions/.env && netlify dev",
         "build": "tsc && vite build",
         "lint": "eslint ./src",
         "lint:fix": "eslint ./src --fix",
@@ -19,6 +20,7 @@
         "@tanstack/react-query": "^4.32.6",
         "contentful": "^10.4.2",
         "globals": "^13.20.0",
+        "netlify": "^13.1.10",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.15.0"
