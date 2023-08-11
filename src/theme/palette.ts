@@ -2,8 +2,8 @@ import { PaletteOptions } from "@mui/material";
 
 export const palette: PaletteOptions = {
     primary: {
-        light: "#22AED1",
-        main: "#016FB9",
+        light: "#2194D1",
+        main: "#0162A2",
     },
     secondary: {
         main: "#182825",
