@@ -19,10 +19,15 @@ const NotFound = (): JSX.Element => {
             <Typography variant="h3" align="center" gutterBottom>
                 Error 404
             </Typography>
-            <Typography gutterBottom color="grayText"  >
+            <Typography gutterBottom color="grayText">
                 The page you are looking for cannot be found.
             </Typography>
-            <Button size="large" variant="contained" onClick={() => navigate("/", { state: { data: "home" } })}>Return Home</Button>
+            <Button
+                size="large"
+                variant="contained"
+                onClick={() => navigate("/", { state: { data: "home" } })}>
+                Return Home
+            </Button>
         </Stack>
     );
 };
