@@ -1,9 +1,9 @@
-import React, { JSX } from 'react';
+import React, { JSX } from "react";
 
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2';
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Unstable_Grid2";
 
-import { SectionTypes } from '@/types';
+import { SectionTypes } from "@/types";
 
 
 const Column = (props: SectionTypes): JSX.Element => {
@@ -22,7 +22,7 @@ const Column = (props: SectionTypes): JSX.Element => {
                 </>
             }
         </>
-    )
-}
+    );
+};
 
 export default Column;

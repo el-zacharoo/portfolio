@@ -1,11 +1,11 @@
-import { JSX } from 'react';
+import { JSX } from "react";
 
-import Button from '@mui/material/Button';
-import CardMedia from '@mui/material/CardMedia';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import Button from "@mui/material/Button";
+import CardMedia from "@mui/material/CardMedia";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
-import type { SectionTypes } from '@/types';
+import type { SectionTypes } from "@/types";
 
 const Center = (props: SectionTypes): JSX.Element => {
     const { contentEntry } = props;
@@ -17,7 +17,7 @@ const Center = (props: SectionTypes): JSX.Element => {
             {contentEntry.fields.image &&
                 <CardMedia
                     component="img"
-                    sx={{ width: '100%', height: 'auto' }}
+                    sx={{ width: "100%", height: "auto" }}
                     src={url as string}
                     alt={contentEntry.fields.image.fields.title as string}
                 />
@@ -36,7 +36,7 @@ const Center = (props: SectionTypes): JSX.Element => {
                 </Button>
             }
         </Stack>
-    )
-}
+    );
+};
 
 export default Center;

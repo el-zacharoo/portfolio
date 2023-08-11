@@ -1,10 +1,10 @@
-import { JSX } from 'react';
+import { JSX } from "react";
 
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2';
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Unstable_Grid2";
 
-import { SectionTypes } from '@/types';
+import { SectionTypes } from "@/types";
 
 const Right = (props: SectionTypes): JSX.Element => {
     const { contentEntry } = props;
@@ -19,7 +19,7 @@ const Right = (props: SectionTypes): JSX.Element => {
                         {contentEntry.fields.image.fields.file?.url &&
                             <CardMedia
                                 component="img"
-                                sx={{ width: '100%', height: 'auto' }}
+                                sx={{ width: "100%", height: "auto" }}
                                 src={url as string}
                                 alt={contentEntry.fields.image.fields.title as string}
                             />
@@ -36,6 +36,6 @@ const Right = (props: SectionTypes): JSX.Element => {
                 </Grid >
             }
         </>
-    )
-}
+    );
+};
 export default Right;

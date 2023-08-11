@@ -17,6 +17,7 @@ export type SectionTypes = {
 export type HerobannerProps = {
     contentEntry: EntrySkeletonType<{
         headline: string;
+        subheader: string;
         body: string;
         heroImage: Asset;
         ctaLabel: string;
@@ -47,7 +48,8 @@ export type TileBlockProps = {
         tiles: EntrySkeletonType<{
             title: string;
             image: Asset;
-        }>[]
+            list: string
+        }>[];
     }>
 }
 

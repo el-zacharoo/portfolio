@@ -1,27 +1,36 @@
-import { JSX } from 'react';
+import { JSX } from "react";
 
-import Center from './Center';
-import Column from './Column';
-import Left from './Left';
-import Right from './Right';
-import type { SectionTypes } from '@/types';
+import Container from "@mui/material/Container";
 
-export const Section = (props: SectionTypes): JSX.Element => {
+import Center from "./Center";
+import Column from "./Column";
+import Left from "./Left";
+import Right from "./Right";
+import type { SectionTypes } from "@/types";
+
+const SectionBody = (props: SectionTypes): JSX.Element => {
     const { contentEntry } = props;
-
-    console.log(contentEntry)
 
     switch (contentEntry?.fields.textDirection) {
         case "center":
-            return <Center contentEntry={contentEntry} />
+            return <Center contentEntry={contentEntry} />;
         case "right":
-            return <Right contentEntry={contentEntry} />
+            return <Right contentEntry={contentEntry} />;
         case "left":
-            return <Left contentEntry={contentEntry} />
+            return <Left contentEntry={contentEntry} />;
         case "column":
-            return <Column contentEntry={contentEntry} />
+            return <Column contentEntry={contentEntry} />;
         default:
-            return <Center contentEntry={contentEntry} />
+            return <Center contentEntry={contentEntry} />;
     }
-}
+};
+
+const Section = (props: SectionTypes): JSX.Element => {
+    return(
+        <Container >
+            <SectionBody {...props} />
+        </Container>
+    );
+};
+
 export default Section;
