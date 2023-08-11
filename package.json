@@ -1,7 +1,7 @@
 {
     "name": "portfolio",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -21,6 +21,7 @@
         "contentful": "^10.4.2",
         "globals": "^13.20.0",
         "netlify": "^13.1.10",
+        "netlify-cli": "^16.0.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.15.0"
