@@ -8,33 +8,53 @@ import Typography from "@mui/material/Typography";
 
 const Footer = (): JSX.Element => {
     return (
-        <Stack
-            component="footer"
-            alignItems="center"
-            justifyContent="center"
-            spacing={2}
-            sx={{ backgroundColor: "secondary.main", py: 6 }}>
-            <Stack alignItems="center" spacing={2}>
+        <>
+            <Stack
+                component="footer"
+                alignItems="center"
+                justifyContent="center"
+                spacing={2}
+                sx={{ backgroundColor: "secondary.main", py: 6 }}>
+                <Stack alignItems="center" spacing={2}>
+                    <Typography align="center" color="white" variant="body1">
+                        For more info, find me on...
+                    </Typography>
+                </Stack>
+                <Stack
+                    sx={{ "&:hover": { color: "grayText" } }}
+                    direction="row"
+                    alignItems="center"
+                    spacing={1}>
+                    {social.map((item: Social) => (
+                        <Link
+                            target="_blank"
+                            sx={{
+                                color: "white",
+                                "&:hover": { color: "primary.light" },
+                            }}
+                            href={item.link}
+                            key={item.id}>
+                            {item.icon}
+                        </Link>
+                    ))}
+                </Stack>
+            </Stack>
+            <Stack sx={{ backgroundColor: "black", py: 2 }}>
                 <Typography align="center" color="white" variant="body1">
-                    For more info, find me on...
+                    View the code for this site{" "}
+                    <Link
+                        sx={{
+                            color: "inherit",
+                            "&:hover": { color: "primary.light" },
+                        }}
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://github.com/el-zacharoo/portfolio">
+                        here
+                    </Link>
                 </Typography>
             </Stack>
-            <Stack
-                sx={{ "&:hover": { color: "grayText" } }}
-                direction="row"
-                alignItems="center"
-                spacing={1}>
-                {social.map((item: Social) => (
-                    <Link
-                        target="_blank"
-                        sx={{ color: "white", "&:hover": { color: "primary.light" } }}
-                        href={item.link}
-                        key={item.id}>
-                        {item.icon}
-                    </Link>
-                ))}
-            </Stack>
-        </Stack>
+        </>
     );
 };
 export default Footer;
