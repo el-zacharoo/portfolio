@@ -25,14 +25,29 @@ export type HerobannerProps = {
     }>
 };
 
-export type ContentBlockType = EntrySkeletonType<{
-    blocks: Array<{
-        [key: string]: string | HerobannerProps | SectionTypes | TileBlockProps
-    }>
+type ContentTypes = {
+    heroBanner: HerobannerProps;
+    section: SectionTypes;
+    tileBlock: TileBlockProps;
+    sys: {
+        contentType: {
+            sys: {
+                id: string;
+            };
+        };
+    };
+}
+
+export type ContentBlocks = EntrySkeletonType<{
+    blocks: ContentTypes[];
 }> | undefined;
 
+export type ContentEntry = {
+    contentEntry: ContentTypes;
+}
+
 export type IHeader = EntrySkeletonType<{
-    blocks: Array<NavLinks>
+    blocks: NavLinks[];
 }> | undefined;
 
 export type NavLinks = EntrySkeletonType<{
@@ -51,7 +66,6 @@ export type TileBlockProps = {
             list: string
         }>[];
     }>
-}
-
+};
 
 export type AllEntries = Record<string, React.FC<HerobannerProps & SectionTypes & TileBlockProps>>; 
