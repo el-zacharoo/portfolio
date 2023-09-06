@@ -27,7 +27,7 @@ const HeroBanner = (props: HerobannerProps): JSX.Element => {
                     alignItems="stretch">
                     <Grid xs={12} sm={6} md={3}>
                         <LoadingImage
-                            skeletonHeight="100%"
+                            skeletonheight="100%"
                             sx={{
                                 width: "100%",
                                 height: "100%",

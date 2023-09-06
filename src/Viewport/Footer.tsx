@@ -6,6 +6,8 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
+import { NpmIcon } from "@/Viewport/NpmIcon";
+
 const Footer = (): JSX.Element => {
     return (
         <>
@@ -75,5 +77,10 @@ const social: Social[] = [
         icon: <LinkedInIcon fontSize="large" />,
         link: "https://www.linkedin.com/in/zachary-weston-ab50b41a0/",
         id: 2,
+    },
+    {
+        icon: <NpmIcon />,
+        link: "https://www.npmjs.com/~el-zacharoo",
+        id: 3,
     },
 ];

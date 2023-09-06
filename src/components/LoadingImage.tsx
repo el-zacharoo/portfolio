@@ -10,18 +10,18 @@ import { Functions } from "@/functions";
 type LoadingImageProps = {
     src: string;
     alt: string;
-    skeletonHeight?: number | string;
+    skeletonheight?: number | string;
     sx?: SystemStyleObject<Theme>;
     width?: number | string;
     id?: string;
 };
 
 export const LoadingImage = (props: LoadingImageProps): JSX.Element => {
-    const { src, skeletonHeight, sx } = props;
+    const { src, skeletonheight, sx } = props;
+    const { imageSrc } = new Functions();
     const [load, setLoad] = useState<boolean>(true);
-    const functions = new Functions();
 
-    const loadSrc = (): string => functions.imageSrc({ setLoad, src });
+    const loadSrc = (): string => imageSrc({ setLoad, src });
     useQuery([src], loadSrc);
 
     return (
@@ -32,7 +32,7 @@ export const LoadingImage = (props: LoadingImageProps): JSX.Element => {
                     sx={sx}
                     variant="rectangular"
                     {...props}
-                    height={skeletonHeight}
+                    height={skeletonheight}
                 />
             ) : (
                 <CardMedia sx={sx} component="img" loading="lazy" {...props} />
